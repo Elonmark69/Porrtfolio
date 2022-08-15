@@ -1,11 +1,16 @@
-import { useEffect, useState, Suspense } from 'react';
-import { Canvas, useLoader } from '@react-three/fiber';
+import { useEffect, useRef, Suspense } from 'react';
+import { Canvas, useLoader, useFrame } from '@react-three/fiber';
 import EarthMap from '../../public/earthmodel.jpg';
 import { TextureLoader } from 'three';
 import { OrbitControls, Stars } from '@react-three/drei';
 
 function Earth(props) {
+  const earthRef = useRef();
   const colorMap = useLoader(TextureLoader, EarthMap.src);
+  useFrame(({ clock }) => {
+    const elaspedTime = clock.getElaspedTime();
+    earthRef.current.rotation.y = elaspedTime / 6;
+  });
   return (
     <>
       <ambientLight intensity={1} />
@@ -17,10 +22,10 @@ function Earth(props) {
         depth={60}
         count={500}
       />
-      <mesh>
+      <mesh ref={earthRef}>
         <sphereGeometry args={[1, 32, 32]} />
         <meshPhongMaterial color="red" />
-        <meshStandardMaterial map={colorMap} />
+        <meshStandardMaterial map={colorMap} metalness={0.4} roughness={0.7} />
         <OrbitControls
           enableRotate={true}
           enableZoom={true}
