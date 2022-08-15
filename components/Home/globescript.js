@@ -8,12 +8,13 @@ function Earth(props) {
   const earthRef = useRef();
   const colorMap = useLoader(TextureLoader, EarthMap.src);
   useFrame(({ clock }) => {
-    const elaspedTime = clock.getElaspedTime();
-    earthRef.current.rotation.y = elaspedTime / 6;
+    const elapsedTime = clock.getElapsedTime();
+    earthRef.current.rotation.y = elapsedTime / 6;
   });
   return (
     <>
       <ambientLight intensity={1} />
+      <ppointerLight color={'red'} intensity={2} poition={[0, 0, 0]} />
       <Stars
         radius={300}
         factor={7}
