@@ -11,7 +11,7 @@ function Earth(props) {
       <mesh>
         <sphereGeometry args={[1, 32, 32]} />
         <meshPhongMaterial color="red" />
-        <meshStandardMaterial colorMap={colorMap} />
+        <meshStandardMaterial map={colorMap} />
       </mesh>
     </>
   );
