@@ -2,6 +2,7 @@
 :root {
   --primarybackground: #1a1a1a;
   --primary-text: #d9d9d9;
+  --spacebackground: #010718;
   --glow: #e6e6e6;
   --primary-blue: #1a8cff;
   --primary: #0066ff;
@@ -16,7 +17,7 @@ body {
   padding: 0;
   margin: 0;
   height: 100%;
-  background-color: var(--primarybackground);
+  background-color: var(--spacebackground);
   color: var(--primary-text);
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
