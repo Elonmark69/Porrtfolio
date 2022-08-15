@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav {
+  border: 2px solid red;
+  width: 25%;
+}
+.main {
+  border: 2px solid orange;
+  width: 50%;
+  height: 100%;
+}

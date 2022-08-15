@@ -1,0 +1,33 @@
+{
+  "Nav": {
+    "Name": "Sundar",
+    "Tabs": [
+      {
+        "name": "Journey",
+        "url": "/journey"
+      },
+      {
+        "name": "Home",
+        "url": "/"
+      },
+      {
+        "name": "Work",
+        "url": "/work"
+      }
+    ],
+    "Socials": [
+      {
+        "Logo": "BsInstagram",
+        "link": "https://google.com"
+      },
+      {
+        "Logo": "BsTwitter",
+        "link": "https://google.com"
+      },
+      {
+        "Logo": "BsLinkedin",
+        "link": "https://google.com"
+      }
+    ]
+  }
+}

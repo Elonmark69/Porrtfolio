@@ -1,0 +1,32 @@
+.container {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  max-height: 20%;
+  padding: 8px;
+  z-index: 1;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logo p {
+  font-family: 'Dancing Script', cursive;
+  font-size: 20px;
+}
+.navigations {
+  display: flex;
+}
+
+.navigations li:hover,
+.socials li:hover {
+  border-bottom: 1px solid var(--roser);
+  color: var(--roser);
+}
+.socials {
+  display: flex;
+}
+.active {
+  border-bottom: 1px solid var(--roser);
+  color: var(--roser);
+}

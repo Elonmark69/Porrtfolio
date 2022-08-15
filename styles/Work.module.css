@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav {
+  border: 2px solid red;
+  width: 25%;
+}
+.work {
+  border: 2px solid red;
+  padding: 10px;
+  height: 30rem;
+  width: 75%;
+  overflow: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.work::-webkit-scrollbar {
+  display: none;
+}

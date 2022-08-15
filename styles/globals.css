@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+:root {
+  --primarybackground: #1a1a1a;
+  --primary-text: #d9d9d9;
+  --glow: #e6e6e6;
+  --primary-blue: #1a8cff;
+  --primary: #0066ff;
+  --seconday: #ff1aff;
+  --danger: #ff0000;
+  --roser: #ff0066;
+}
+
+html,
+body {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  background-color: var(--primarybackground);
+  color: var(--primary-text);
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+li {
+  padding: 10px;
+  list-style-type: none;
+  transition: 0.3s;
+}
+.app {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 90%;
+  width: 100%;
+}
+.container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
