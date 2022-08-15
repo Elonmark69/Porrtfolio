@@ -14,27 +14,20 @@ function Earth(props) {
   return (
     <>
       <ambientLight intensity={1} />
-      <ppointerLight color={'red'} intensity={2} poition={[0, 0, 0]} />
+      <pointLight color="gold" intensity={1.2} position={[2, 0, 2]} />
       <Stars
         radius={300}
         factor={7}
         fade={true}
         saturation={0}
         depth={60}
-        count={500}
+        count={20000}
       />
       <mesh ref={earthRef}>
         <sphereGeometry args={[1, 32, 32]} />
         <meshPhongMaterial color="red" />
         <meshStandardMaterial map={colorMap} metalness={0.4} roughness={0.7} />
-        <OrbitControls
-          enableRotate={true}
-          enableZoom={true}
-          enablePan={true}
-          panSpeed={0.5}
-          zoomSpeed={0.5}
-          rotateSpeed={0.5}
-        />
+        <OrbitControls enableRotate={true} rotateSpeed={0.5} />
       </mesh>
     </>
   );
