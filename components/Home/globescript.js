@@ -4,7 +4,7 @@ import EarthMap from '../../public/earthmodel.jpg';
 import { TextureLoader } from 'three';
 
 function Earth(props) {
-  const colorMap = useLoader(TextureLoader, EarthMap);
+  const colorMap = useLoader(TextureLoader, EarthMap.src);
   return (
     <>
       <ambientLight intensity={1} />

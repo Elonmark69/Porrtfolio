@@ -1,6 +1,5 @@
 import Styles from '../../styles/Home.module.css';
 import Globe from './globescript';
-
 export default function Home() {
   const { container, main } = Styles;
   return (
