@@ -1,5 +1,5 @@
 import Styles from '../../styles/Home.module.css';
-// import Globe from './globescript';
+import Globe from './globescript';
 
 export default function Home() {
   const { container, main } = Styles;
@@ -8,6 +8,7 @@ export default function Home() {
       <Semicircle />
       <div className={main}>
         <h1>Hello</h1>
+        <Globe />
       </div>
       <Semicircle />
     </div>

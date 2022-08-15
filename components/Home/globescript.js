@@ -1,25 +1,28 @@
-import React, { useRef } from 'react';
-import { Canvas, useFrame, useLoader } from '@react-three/fiber';
-import * as THREE from 'three';
-import earthImg from './jp.jpg';
+import { useEffect, useState, Suspense } from 'react';
+import { Canvas, useLoader } from '@react-three/fiber';
+import EarthMap from '../../public/earthmodel.jpg';
+import { TextureLoader } from 'three';
 
-const Sphere = () => {
-  const base = new THREE.TextureLoader().load(earthImg);
-  const ref = useRef();
-  useFrame(() => (ref.current.rotation.x = ref.current.rotation.y += 0.01));
+function Earth(props) {
+  const colorMap = useLoader(TextureLoader, EarthMap);
   return (
-    <mesh visible castShadow ref={ref}>
-      <directionalLight intensity={0.5} />
-      <sphereGeometry attach="geometry" args={[2, 32, 32]} />
-      <meshBasicMaterial map={base} color="white" />
-    </mesh>
+    <>
+      <ambientLight intensity={1} />
+      <mesh>
+        <sphereGeometry args={[1, 32, 32]} />
+        <meshPhongMaterial color="red" />
+        <meshStandardMaterial colorMap={colorMap} />
+      </mesh>
+    </>
   );
-};
-export default function Globe() {
+}
+
+export default function globe() {
   return (
     <Canvas>
-      <ambientLight />
-      <Sphere />
+      <Suspense fallback={null}>
+        <Earth />
+      </Suspense>
     </Canvas>
   );
 }
