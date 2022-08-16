@@ -1,12 +1,14 @@
 import React from 'react';
 import Nav from './Nav';
+import Transition from '../components/Transition';
 
 export default function Layout({ children }) {
   return (
     <>
-    <div className="app">
-      {children}
-      </div>
+      <Transition>
+        <div className="app">{children}</div>
+      </Transition>
+
       <Nav />
     </>
   );

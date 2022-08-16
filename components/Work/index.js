@@ -1,12 +1,11 @@
 import Styles from '../../styles/Work.module.css';
+import Slider from '../slider';
 
 export default function Work() {
   const { container, nav, work } = Styles;
   return (
     <div className={container}>
-      <div className={nav}>
-        <h1>Work</h1>
-      </div>
+      <Slider />
       <div className={work}>
         <h1>
           Lorem Ipsum is simply dummy text of the printing and typesetting
